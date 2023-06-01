@@ -36,7 +36,7 @@ const App = () => {
             <button onClick={handleClick}>C</button>
             <button onClick={handleClick}>0</button>
             <button onClick={handleClick}>,</button>
-            <button onClick={handleClick}>=</button>
+            <button className="equal" onClick={handleClick}>=</button>
             </div>
       </div>
     </>
