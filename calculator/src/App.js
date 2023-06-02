@@ -29,11 +29,11 @@ const App = () => {
 
   return (
     <>
+    <h1 className="titulo">This is my calculator</h1>
       <div className="container">
         <form>
           <input type="text" value={result} />
         </form>
-
         <div className="keypad">
             <button onClick={clear} id="clear">AC</button>
             <button onClick={handleClick}>%</button>
