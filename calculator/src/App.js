@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
+import MyInput from "../src/components/MyInput";
 
 
 const App = () => {
@@ -24,16 +25,18 @@ const App = () => {
         }catch(err) {
           setResult("Error")
         }
-       
-    }
+      }
+
+      const handleInputChange = (e) => {
+        setResult(e.target.value);
+      };
+
 
   return (
     <>
     <h1 className="titulo">This is my calculator</h1>
       <div className="container">
-        <form>
-          <input type="text" value={result} />
-        </form>
+        <MyInput value={result} onChange={setResult} />
         <div className="keypad">
             <button onClick={clear} id="clear">AC</button>
             <button onClick={handleClick}>%</button>
@@ -56,7 +59,7 @@ const App = () => {
             <button name="." onClick={handleClick}>.</button>
             <button className="equal" onClick={calculate} id="result">=</button>
             </div>
-      </div>
+            </div>
     </>
   );
 };
